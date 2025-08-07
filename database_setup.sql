@@ -42,22 +42,32 @@ CREATE TABLE PurchaseContains (
 
 INSERT INTO Customer (FirstName, LastName, Email) VALUES
 ('John', 'Doe', 'john.doe@email.com'),
-('Jane', 'Smith', 'jane.smith@email.com');
+('Jane', 'Smith', 'jane.smith@email.com'),
+('Emily', 'White', 'emily.white@email.com'),
+('Michael', 'Brown', 'michael.brown@email.com');
 
 INSERT INTO Staff (FirstName, LastName, Role) VALUES
 ('Alice', 'Jones', 'Manager'),
-('Bob', 'Williams', 'Sales Associate');
+('Bob', 'Williams', 'Sales Associate'),
+('Chris', 'Green', 'Tech Support');
 
 INSERT INTO Product (Name, Price, StockQuantity) VALUES
 ('Laptop', 1200.00, 50),
 ('Mouse', 25.00, 200),
-('Keyboard', 75.00, 150);
+('Keyboard', 75.00, 150),
+('Webcam', 45.00, 80),
+('Monitor', 300.00, 40);
 
 INSERT INTO Purchase (PurchaseDate, CustomerID, StaffID) VALUES
 ('2025-08-06', 1, 2), 
-('2025-08-07', 2, 2); 
+('2025-08-07', 2, 2),
+('2025-08-07', 3, 3),
+('2025-08-07', 4, 2);
 
 INSERT INTO PurchaseContains (PurchaseID, ProductID, PriceAtPurchase, Quantity) VALUES
 (1, 1, 1200.00, 1),
 (1, 2, 25.00, 1),
-(2, 3, 75.00, 2);
+(2, 3, 75.00, 2),
+(3, 4, 45.00, 1),
+(4, 5, 300.00, 2),
+(4, 2, 25.00, 1);
